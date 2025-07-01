@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F03C632-64F0-4EE0-8144-D90228677B8C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SIPKA</RootNamespace>
+    <AssemblyName>SIPKA</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.30.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="config\ConnectDB_cls.cs" />
+    <Compile Include="config\Services_cls.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\admin_cls.cs" />
+    <Compile Include="model\jadwal_cls.cs" />
+    <Compile Include="model\kereta_cls.cs" />
+    <Compile Include="model\login_cls.cs" />
+    <Compile Include="model\pembayaran_cls.cs" />
+    <Compile Include="model\pemesanan_cls.cs" />
+    <Compile Include="model\penumpang_cls.cs" />
+    <Compile Include="model\register_cls.cs" />
+    <Compile Include="model\stasiun_cls.cs" />
+    <Compile Include="model\user_cls.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\Dashboard_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Dashboard_frm.Designer.cs">
+      <DependentUpon>Dashboard_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\formjadwal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\formjadwal.Designer.cs">
+      <DependentUpon>formjadwal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\formstasiun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\formstasiun.Designer.cs">
+      <DependentUpon>formstasiun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Form_Pembayaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Form_Pembayaran.Designer.cs">
+      <DependentUpon>Form_Pembayaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Form_Pemesanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Form_Pemesanan.Designer.cs">
+      <DependentUpon>Form_Pemesanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Form_RUD_Pemesanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Form_RUD_Pemesanan.Designer.cs">
+      <DependentUpon>Form_RUD_Pemesanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Kereta_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Kereta_frm.Designer.cs">
+      <DependentUpon>Kereta_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Login_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Login_frm.Designer.cs">
+      <DependentUpon>Login_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\penumpang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\penumpang.Designer.cs">
+      <DependentUpon>penumpang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Register_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Register_frm.Designer.cs">
+      <DependentUpon>Register_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\user.Designer.cs">
+      <DependentUpon>user.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\Dashboard_frm.resx">
+      <DependentUpon>Dashboard_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\formjadwal.resx">
+      <DependentUpon>formjadwal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\formstasiun.resx">
+      <DependentUpon>formstasiun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Form_Pembayaran.resx">
+      <DependentUpon>Form_Pembayaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Form_Pemesanan.resx">
+      <DependentUpon>Form_Pemesanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Form_RUD_Pemesanan.resx">
+      <DependentUpon>Form_RUD_Pemesanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Kereta_frm.resx">
+      <DependentUpon>Kereta_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Login_frm.resx">
+      <DependentUpon>Login_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\penumpang.resx">
+      <DependentUpon>penumpang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Register_frm.resx">
+      <DependentUpon>Register_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\user.resx">
+      <DependentUpon>user.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
